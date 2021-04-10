@@ -2,6 +2,11 @@
 #define MAINAPP_H
 
 #include <QMainWindow>
+//#include "account.h"
+//#include "interests.h"
+//pages
+#include "mainPage.h"
+#include "loginPage.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainApp; }
@@ -17,5 +22,11 @@ public:
 
 private:
     Ui::MainApp *ui;
+    //Account *user;
+    LoginPage *loginPage;
+    MainPage *mainPage;
+
+
+    void closeLogin();
 };
 #endif // MAINAPP_H
