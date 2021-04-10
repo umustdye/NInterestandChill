@@ -1,4 +1,4 @@
-#include "mainApp.hpp"
+#include "mainApp.h"
 #include "ui_mainApp.h"
 
 MainApp::MainApp(QWidget *parent)

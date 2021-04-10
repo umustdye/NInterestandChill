@@ -1,5 +1,5 @@
-#ifndef MAINAPP_HPP
-#define MAINAPP_HPP
+#ifndef MAINAPP_H
+#define MAINAPP_H
 
 #include <QMainWindow>
 
@@ -18,4 +18,4 @@ public:
 private:
     Ui::MainApp *ui;
 };
-#endif // MAINAPP_HPP
+#endif // MAINAPP_H

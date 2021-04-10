@@ -13,7 +13,7 @@ SOURCES += \
     mainApp.cpp
 
 HEADERS += \
-    mainApp.hpp
+    mainApp.h
 
 FORMS += \
     mainApp.ui
