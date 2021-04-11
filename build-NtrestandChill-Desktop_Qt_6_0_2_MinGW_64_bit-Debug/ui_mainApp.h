@@ -43,6 +43,18 @@ public:
         if (MainApp->objectName().isEmpty())
             MainApp->setObjectName(QString::fromUtf8("MainApp"));
         MainApp->resize(800, 600);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        QBrush brush1(QColor(59, 66, 67, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        MainApp->setPalette(palette);
         centralwidget = new QWidget(MainApp);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout_2 = new QHBoxLayout(centralwidget);
@@ -65,7 +77,7 @@ public:
         stackedWidget->setAcceptDrops(false);
         stackedWidget->setFrameShape(QFrame::Panel);
         stackedWidget->setFrameShadow(QFrame::Plain);
-        stackedWidget->setLineWidth(5);
+        stackedWidget->setLineWidth(2);
         loginPage = new QWidget();
         loginPage->setObjectName(QString::fromUtf8("loginPage"));
         stackedWidget->addWidget(loginPage);

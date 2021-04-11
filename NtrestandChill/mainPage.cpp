@@ -6,6 +6,11 @@ MainPage::MainPage(QWidget *parent) :
     ui(new Ui::MainPage)
 {
     ui->setupUi(this);
+
+    QPalette pal = palette();
+
+    //set background color
+    this->setAutoFillBackground(true);
 }
 
 MainPage::~MainPage()

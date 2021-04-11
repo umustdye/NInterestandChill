@@ -2,6 +2,7 @@
 #define LOGINPAGE_H
 
 #include <QWidget>
+#include "createAccountPage.hpp"
 
 namespace Ui {
 class LoginPage;
