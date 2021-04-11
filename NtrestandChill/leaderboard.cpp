@@ -10,7 +10,7 @@ LeaderBoard::LeaderBoard(QWidget *parent) :
     QStringList leaderBoardSpot;
     QStringList leaderBoardName;
     QStringList leaderBoardPoints;
-    // Set the leaderboard information from the server to the leaderBoardList
+    // Set the leaderboard information from the server to the leaderBoardSpot, leaderBoardName, and leaderBoardPoints
     //might have to format the spacing
     leaderBoardSpot.push_back("Rank");
     leaderBoardName.push_back("Username");
