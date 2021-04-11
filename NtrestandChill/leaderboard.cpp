@@ -25,3 +25,8 @@ LeaderBoard::~LeaderBoard()
 {
     delete ui;
 }
+
+void LeaderBoard::on_returnToMain_clicked()
+{
+    emit returnBack();
+}

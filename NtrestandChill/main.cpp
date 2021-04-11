@@ -5,8 +5,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    //MainApp w;
-    LeaderBoard w;
+    MainApp w;
+    //LeaderBoard w;
     w.show();
 
     return a.exec();

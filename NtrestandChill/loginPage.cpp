@@ -27,5 +27,24 @@ void LoginPage::on_createAccount_clicked()
 
 void LoginPage::on_login_clicked()
 {
-    emit closeLogin();
+    bool loginSuceess = true;
+    QString message = "Hello";
+
+    //do socket stuff to check the server
+    //check if the login information exists
+
+
+    if(loginSuceess)
+    {
+        ui->inputErrror->setText("");
+        ui->inputErrror->hide();
+        emit closeLogin();
+    }
+
+    else
+    {
+        this->ui->password->clear();
+        ui->inputErrror->setVisible(true);
+        ui->inputErrror->setText(message);
+    }
 }

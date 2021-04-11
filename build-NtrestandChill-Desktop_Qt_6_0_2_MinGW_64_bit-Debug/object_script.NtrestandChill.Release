@@ -1,0 +1,12 @@
+release/createAccountPage.o
+release/leaderboard.o
+release/loginPage.o
+release/main.o
+release/mainApp.o
+release/mainPage.o
+release/qrc_resources.o
+release/moc_createAccountPage.o
+release/moc_leaderboard.o
+release/moc_loginPage.o
+release/moc_mainApp.o
+release/moc_mainPage.o

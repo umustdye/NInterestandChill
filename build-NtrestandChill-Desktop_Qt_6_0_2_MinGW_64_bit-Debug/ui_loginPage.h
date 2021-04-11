@@ -33,8 +33,10 @@ public:
     QLineEdit *username;
     QLabel *passwordLabel;
     QLineEdit *password;
+    QVBoxLayout *verticalLayout_3;
     QSpacerItem *verticalSpacer;
     QLabel *inputErrror;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout;
     QPushButton *createAccount;
     QSpacerItem *horizontalSpacer;
@@ -46,36 +48,38 @@ public:
             LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
         LoginPage->resize(400, 300);
         QPalette palette;
-        QBrush brush(QColor(255, 255, 255, 255));
+        QBrush brush(QColor(255, 246, 203, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette.setBrush(QPalette::Active, QPalette::Base, brush);
-        QBrush brush1(QColor(114, 131, 132, 255));
+        QBrush brush1(QColor(255, 255, 255, 255));
         brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
-        QBrush brush2(QColor(255, 255, 255, 128));
+        palette.setBrush(QPalette::Active, QPalette::Text, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        QBrush brush2(QColor(49, 100, 51, 255));
         brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush2);
+        QBrush brush3(QColor(255, 255, 255, 128));
+        brush3.setStyle(Qt::SolidPattern);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush2);
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush3);
 #endif
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush2);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush3);
 #endif
-        QBrush brush3(QColor(120, 120, 120, 255));
-        brush3.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
-        palette.setBrush(QPalette::Disabled, QPalette::Text, brush3);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        QBrush brush4(QColor(0, 0, 0, 128));
+        QBrush brush4(QColor(120, 120, 120, 255));
         brush4.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        QBrush brush5(QColor(0, 0, 0, 128));
+        brush5.setStyle(Qt::SolidPattern);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush4);
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush5);
 #endif
         LoginPage->setPalette(palette);
         verticalLayout_2 = new QVBoxLayout(LoginPage);
@@ -85,6 +89,17 @@ public:
         verticalLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
         loginLabel = new QLabel(LoginPage);
         loginLabel->setObjectName(QString::fromUtf8("loginLabel"));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        loginLabel->setPalette(palette1);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font.setPointSize(16);
+        font.setItalic(true);
+        font.setUnderline(false);
+        loginLabel->setFont(font);
         loginLabel->setLayoutDirection(Qt::LeftToRight);
         loginLabel->setAlignment(Qt::AlignCenter);
         loginLabel->setTextInteractionFlags(Qt::NoTextInteraction);
@@ -95,66 +110,128 @@ public:
         formLogin->setObjectName(QString::fromUtf8("formLogin"));
         usernameLabel = new QLabel(LoginPage);
         usernameLabel->setObjectName(QString::fromUtf8("usernameLabel"));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font1.setPointSize(9);
+        font1.setItalic(true);
+        usernameLabel->setFont(font1);
 
         formLogin->setWidget(0, QFormLayout::LabelRole, usernameLabel);
 
         username = new QLineEdit(LoginPage);
         username->setObjectName(QString::fromUtf8("username"));
-        QPalette palette1;
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush5(QColor(0, 0, 0, 255));
-        brush5.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Text, brush5);
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush5);
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
-        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush3);
-        username->setPalette(palette1);
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush1);
+        QBrush brush6(QColor(0, 0, 0, 255));
+        brush6.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush6);
+        QBrush brush7(QColor(0, 0, 0, 128));
+        brush7.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Active, QPalette::PlaceholderText, brush7);
+#endif
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        QBrush brush8(QColor(0, 0, 0, 128));
+        brush8.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush8);
+#endif
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush4);
+        QBrush brush9(QColor(0, 0, 0, 128));
+        brush9.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush9);
+#endif
+        username->setPalette(palette2);
 
         formLogin->setWidget(0, QFormLayout::FieldRole, username);
 
         passwordLabel = new QLabel(LoginPage);
         passwordLabel->setObjectName(QString::fromUtf8("passwordLabel"));
+        passwordLabel->setFont(font1);
 
         formLogin->setWidget(1, QFormLayout::LabelRole, passwordLabel);
 
         password = new QLineEdit(LoginPage);
         password->setObjectName(QString::fromUtf8("password"));
-        QPalette palette2;
-        palette2.setBrush(QPalette::Active, QPalette::Text, brush5);
-        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush5);
-        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush3);
-        password->setPalette(palette2);
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush6);
+        QBrush brush10(QColor(0, 0, 0, 128));
+        brush10.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Active, QPalette::PlaceholderText, brush10);
+#endif
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush6);
+        QBrush brush11(QColor(0, 0, 0, 128));
+        brush11.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush11);
+#endif
+        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush4);
+        QBrush brush12(QColor(0, 0, 0, 128));
+        brush12.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush12);
+#endif
+        password->setPalette(palette3);
 
         formLogin->setWidget(1, QFormLayout::FieldRole, password);
 
 
         verticalLayout->addLayout(formLogin);
 
-        verticalSpacer = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        verticalLayout->addItem(verticalSpacer);
+        verticalLayout_3->addItem(verticalSpacer);
 
         inputErrror = new QLabel(LoginPage);
         inputErrror->setObjectName(QString::fromUtf8("inputErrror"));
-        QPalette palette3;
-        QBrush brush6(QColor(170, 0, 0, 255));
-        brush6.setStyle(Qt::SolidPattern);
-        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush6);
-        palette3.setBrush(QPalette::Active, QPalette::Text, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush6);
-        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
-        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush3);
-        inputErrror->setPalette(palette3);
+        QPalette palette4;
+        QBrush brush13(QColor(170, 0, 0, 255));
+        brush13.setStyle(Qt::SolidPattern);
+        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush13);
+        palette4.setBrush(QPalette::Active, QPalette::Text, brush13);
+        QBrush brush14(QColor(170, 0, 0, 128));
+        brush14.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette4.setBrush(QPalette::Active, QPalette::PlaceholderText, brush14);
+#endif
+        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush13);
+        palette4.setBrush(QPalette::Inactive, QPalette::Text, brush13);
+        QBrush brush15(QColor(170, 0, 0, 128));
+        brush15.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette4.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush15);
+#endif
+        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush4);
+        QBrush brush16(QColor(170, 0, 0, 128));
+        brush16.setStyle(Qt::NoBrush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette4.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush16);
+#endif
+        inputErrror->setPalette(palette4);
+        inputErrror->setFont(font1);
         inputErrror->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(inputErrror);
+        verticalLayout_3->addWidget(inputErrror);
+
+        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_3->addItem(verticalSpacer_2);
+
+
+        verticalLayout->addLayout(verticalLayout_3);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         createAccount = new QPushButton(LoginPage);
         createAccount->setObjectName(QString::fromUtf8("createAccount"));
+        createAccount->setFont(font1);
 
         horizontalLayout->addWidget(createAccount);
 
@@ -164,6 +241,7 @@ public:
 
         login = new QPushButton(LoginPage);
         login->setObjectName(QString::fromUtf8("login"));
+        login->setFont(font1);
 
         horizontalLayout->addWidget(login);
 

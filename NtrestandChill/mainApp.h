@@ -7,6 +7,7 @@
 //pages
 #include "mainPage.h"
 #include "loginPage.h"
+#include "leaderboard.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainApp; }
@@ -25,8 +26,11 @@ private:
     //Account *user;
     LoginPage *loginPage;
     MainPage *mainPage;
+    LeaderBoard *highScorePage;
 
 
     void closeLogin();
+    void goToLeaderBoard();
+    void returnToMain();
 };
 #endif // MAINAPP_H

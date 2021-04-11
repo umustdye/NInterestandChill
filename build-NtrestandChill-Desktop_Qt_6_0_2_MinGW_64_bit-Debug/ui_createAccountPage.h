@@ -52,42 +52,32 @@ public:
             CreateAccountPage->setObjectName(QString::fromUtf8("CreateAccountPage"));
         CreateAccountPage->resize(717, 589);
         QPalette palette;
-        QBrush brush(QColor(253, 253, 253, 255));
+        QBrush brush(QColor(255, 246, 203, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(0, 0, 0, 255));
+        QBrush brush1(QColor(255, 255, 255, 255));
         brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Text, brush1);
-        QBrush brush2(QColor(255, 255, 255, 255));
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        QBrush brush2(QColor(49, 100, 51, 255));
         brush2.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Base, brush2);
-        QBrush brush3(QColor(81, 93, 93, 255));
-        brush3.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush3);
-        QBrush brush4(QColor(255, 255, 255, 128));
-        brush4.setStyle(Qt::SolidPattern);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush4);
-#endif
+        palette.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Active, QPalette::Shadow, brush2);
         palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Text, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Base, brush2);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush3);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush4);
-#endif
-        QBrush brush5(QColor(120, 120, 120, 255));
-        brush5.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
-        palette.setBrush(QPalette::Disabled, QPalette::Text, brush5);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush3);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush3);
-        QBrush brush6(QColor(0, 0, 0, 128));
-        brush6.setStyle(Qt::SolidPattern);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush6);
-#endif
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Shadow, brush2);
+        QBrush brush3(QColor(120, 120, 120, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush2);
         CreateAccountPage->setPalette(palette);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font.setPointSize(9);
+        font.setItalic(true);
+        CreateAccountPage->setFont(font);
         verticalLayout_2 = new QVBoxLayout(CreateAccountPage);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
@@ -95,6 +85,18 @@ public:
         verticalLayout->setContentsMargins(30, 30, 30, 30);
         createAccountPage = new QLabel(CreateAccountPage);
         createAccountPage->setObjectName(QString::fromUtf8("createAccountPage"));
+        QPalette palette1;
+        QBrush brush4(QColor(140, 140, 140, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Shadow, brush4);
+        palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush4);
+        palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush4);
+        createAccountPage->setPalette(palette1);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font1.setPointSize(14);
+        font1.setItalic(true);
+        createAccountPage->setFont(font1);
         createAccountPage->setAlignment(Qt::AlignCenter);
         createAccountPage->setTextInteractionFlags(Qt::NoTextInteraction);
 
@@ -110,11 +112,12 @@ public:
         gridLayout->setVerticalSpacing(36);
         firstNameLabel = new QLabel(CreateAccountPage);
         firstNameLabel->setObjectName(QString::fromUtf8("firstNameLabel"));
-        QFont font;
-        font.setFamily(QString::fromUtf8("Arial Black"));
-        font.setPointSize(10);
-        font.setBold(true);
-        firstNameLabel->setFont(font);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Arial Black"));
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setItalic(true);
+        firstNameLabel->setFont(font2);
         firstNameLabel->setTextInteractionFlags(Qt::NoTextInteraction);
 
         gridLayout->addWidget(firstNameLabel, 0, 0, 1, 1);
@@ -131,7 +134,7 @@ public:
 
         retypePasswordLabel = new QLabel(CreateAccountPage);
         retypePasswordLabel->setObjectName(QString::fromUtf8("retypePasswordLabel"));
-        retypePasswordLabel->setFont(font);
+        retypePasswordLabel->setFont(font2);
         retypePasswordLabel->setTextInteractionFlags(Qt::NoTextInteraction);
 
         gridLayout->addWidget(retypePasswordLabel, 4, 0, 1, 1);
@@ -148,21 +151,21 @@ public:
 
         passwordLabel = new QLabel(CreateAccountPage);
         passwordLabel->setObjectName(QString::fromUtf8("passwordLabel"));
-        passwordLabel->setFont(font);
+        passwordLabel->setFont(font2);
         passwordLabel->setTextInteractionFlags(Qt::NoTextInteraction);
 
         gridLayout->addWidget(passwordLabel, 3, 0, 1, 1);
 
         lastNameLabel = new QLabel(CreateAccountPage);
         lastNameLabel->setObjectName(QString::fromUtf8("lastNameLabel"));
-        lastNameLabel->setFont(font);
+        lastNameLabel->setFont(font2);
         lastNameLabel->setTextInteractionFlags(Qt::NoTextInteraction);
 
         gridLayout->addWidget(lastNameLabel, 1, 0, 1, 1);
 
         userNameLabel = new QLabel(CreateAccountPage);
         userNameLabel->setObjectName(QString::fromUtf8("userNameLabel"));
-        userNameLabel->setFont(font);
+        userNameLabel->setFont(font2);
         userNameLabel->setTextInteractionFlags(Qt::NoTextInteraction);
 
         gridLayout->addWidget(userNameLabel, 2, 0, 1, 1);
@@ -187,14 +190,14 @@ public:
 
         createAccountMessage = new QLabel(CreateAccountPage);
         createAccountMessage->setObjectName(QString::fromUtf8("createAccountMessage"));
-        QPalette palette1;
-        QBrush brush7(QColor(213, 0, 0, 255));
-        brush7.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush7);
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush7);
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
-        createAccountMessage->setPalette(palette1);
-        createAccountMessage->setFont(font);
+        QPalette palette2;
+        QBrush brush5(QColor(213, 0, 0, 255));
+        brush5.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        createAccountMessage->setPalette(palette2);
+        createAccountMessage->setFont(font2);
         createAccountMessage->setAlignment(Qt::AlignCenter);
 
         verticalLayout->addWidget(createAccountMessage);
