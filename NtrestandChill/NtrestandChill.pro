@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     createAccountPage.cpp \
+    leaderboard.cpp \
     loginPage.cpp \
     main.cpp \
     mainApp.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     createAccountPage.hpp \
+    leaderboard.h \
     loginPage.h \
     mainApp.h \
     mainPage.h
@@ -25,6 +27,7 @@ HEADERS += \
 
 FORMS += \
     createAccountPage.ui \
+    leaderboard.ui \
     loginPage.ui \
     mainApp.ui \
     mainPage.ui

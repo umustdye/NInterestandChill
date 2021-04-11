@@ -1,0 +1,11 @@
+debug/createAccountPage.o
+debug/leaderboard.o
+debug/loginPage.o
+debug/main.o
+debug/mainApp.o
+debug/mainPage.o
+debug/moc_createAccountPage.o
+debug/moc_leaderboard.o
+debug/moc_loginPage.o
+debug/moc_mainApp.o
+debug/moc_mainPage.o
